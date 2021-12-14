@@ -15,3 +15,7 @@ RUN apt-get update && \
     apt-get autoremove -y && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
+
+RUN /usr/local/bin/python -m pip install --upgrade pip
+
+RUN /usr/local/bin/python -m pip install -r requirements.txt
